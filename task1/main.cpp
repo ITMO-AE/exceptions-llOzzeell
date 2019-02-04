@@ -12,7 +12,12 @@ int main()
     std::string left = "apple";
     std::string right = "plum";
 
-    checkEqual(left, right);
+    try{
+        checkEqual(left, right);
+    }
+    catch(std::runtime_error *er){
+        std::cout << er->what();
+    }
 
     return 0;
 }
